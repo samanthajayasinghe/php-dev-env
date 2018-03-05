@@ -78,7 +78,7 @@ services:
 
 volumes:
     pgsql-data:
-    mssql-data:
+    mysql-data:
     web-data:
 
 networks:
