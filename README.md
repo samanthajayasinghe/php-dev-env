@@ -26,6 +26,23 @@ This project will facilitate inbuilt development environment for developers
 | PHP 7.0  | http://php70  | 
 | PHP 5.6  | http://php56  | 
 
+### Config & Database
+
+DB | Host | User | Password
+--- | --- | --- | ---
+**PostresSQL** | pgsql | postresql | 
+**Mysql** | mysql | root | root
+
+To use the command line clients provided by the containers you can use the following commands:
+
+```bash
+# PostgreSQL
+docker-compose exec pgsql psql -U postgres
+
+# MySQL
+docker-compose exec mysql` mysql -u root -p"root"
+```
+
 #### How to browse your projects 
 
 - php 5.6 : http://php56/projectName}/testme.php
