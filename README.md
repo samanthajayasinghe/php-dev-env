@@ -53,18 +53,22 @@ docker-compose exec mysql` mysql -u root -p"root"
 #### How to execute unit tests
  __Execute Test PHP 7.2:__
  ```bash
- docker-compose exec php-7.2 /bin/bashh
+ docker-compose exec php-7.2 /bin/bash
  phpunit
  ```
  
   __Execute Test PHP 7.1:__
   ```bash
-  docker-compose exec php-7.1 /bin/bashh
+  docker-compose exec php-7.1 /bin/bash
   phpunit
   ```
   
   __Execute Test PHP 7.0:__
   ```bash
-   docker-compose exec php-7.0 /bin/bashh
+   docker-compose exec php-7.0 /bin/bash
    phpunit
   ```
+#### Build Images
+```bash
+docker-compose -f docker-compose.yml -f docker-compose-build.yml build nginx
+```
