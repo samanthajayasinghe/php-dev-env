@@ -16,7 +16,16 @@ This project will facilitate inbuilt development environment for developers
  ```bash
  127.0.0.1	php56 php70 php71 php72
  ```
+#### How to up/down containers 
+Up all containers
+```bash
+docker-compose up -d
+```
  
+Down all container
+```bash
+docker-compose stop
+```
 #### Env information 
 
 | PHP Version  | Host | 
