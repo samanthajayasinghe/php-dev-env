@@ -37,9 +37,11 @@ docker-compose stop
 
 ### Config & Database
 
-DB | Host | User | Password
-**Mysql** | mysql | root | root
-**Mariadb** | mariadb | root | root
+| DB  | Host |User  | Password |
+| --- | ---- |---- | ------- |
+| Mysql  | mysql  |root  | root  |
+| Mysql  | mariadb  |root  | root  |
+
 
 To use the command line clients provided by the containers you can use the following commands:
 
