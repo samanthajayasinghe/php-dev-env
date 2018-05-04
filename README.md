@@ -38,18 +38,17 @@ docker-compose stop
 ### Config & Database
 
 DB | Host | User | Password
---- | --- | --- | ---
-**PostresSQL** | pgsql | postresql | 
 **Mysql** | mysql | root | root
+**Mariadb** | mariadb | root | root
 
 To use the command line clients provided by the containers you can use the following commands:
 
 ```bash
-# PostgreSQL
-docker-compose exec pgsql psql -U postgres
-
 # MySQL
 docker-compose exec mysql` mysql -u root -p"root"
+
+# MariaDB
+docker-compose exec mariadb -u root -p"root"
 ```
 
 #### How to browse your projects 

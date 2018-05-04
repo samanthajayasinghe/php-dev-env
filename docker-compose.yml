@@ -54,17 +54,6 @@ services:
      networks:
        - php-dev
 
-  pgsql:
-    image: postgres:9.6
-    ports:
-      - "5432:5432"
-    environment:
-      PGDATA: /var/lib/postgresql/data/pgdata
-    volumes:
-      - pgsql-data:/var/lib/postgresql/data
-    networks:
-      - php-dev
-
   mysql:
     image: mysql:5.7
     ports:
@@ -76,10 +65,26 @@ services:
     networks:
       - php-dev
 
+  mariadb:
+    image: mariadb:10.2
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PW}
+    volumes:
+      - mariadb-data:/var/lib/mysql
+      - ./mariadb:/etc/mysql/conf.d
+    depends_on:
+      - nginx
+    mem_swappiness: 1
+    networks:
+      - php-dev
+
 volumes:
     pgsql-data:
     mysql-data:
     web-data:
+    mariadb-data:
 
 networks:
   php-dev:
